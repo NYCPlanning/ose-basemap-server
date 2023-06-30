@@ -2,4 +2,5 @@
 
 ## Tools
 - Maptiler [tileserver-gl](https://github.com/maptiler/tileserver-gl/)
-- [Positron Style](docker pull maptiler/tileserver-gl:latest)
+- [OpenMapTiles Positron Style](https://github.com/openmaptiles/positron-gl-style/blob/master/style.json)
+- [Planning Positron Style](https://github.com/NYCPlanning/labs-gl-style/blob/master/data/style.json)
