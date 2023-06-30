@@ -1,5 +1,11 @@
 services:
+  nginx:
+    build: ./nginx
+    ports:
+      - 8000:80
+    depends_on:
+      - tileserver
   tileserver:
-    build: .
+    build: ./tileserver
     ports:
       - 8080:8080
