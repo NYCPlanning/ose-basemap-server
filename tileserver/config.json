@@ -18,13 +18,13 @@
   },
   "sources": {
     "openmaptiles": {
-        "url": "mbtiles://2017-07-03_north-america_us-northeast.mbtiles",
+        "url": "mbtiles://basemap.mbtiles",
         "type": "vector"
     }
   },
   "data": {
     "v3": {
-      "mbtiles": "2017-07-03_north-america_us-northeast.mbtiles"
+      "mbtiles": "basemap.mbtiles"
     }
   }
 }
