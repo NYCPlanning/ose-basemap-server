@@ -5,21 +5,27 @@
       "fonts": "fonts",
       "styles": "styles",
       "mbtiles": "/data"
-    }
+    },
+    "serveAllFonts": true
   },
   "styles": {
     "positron": {
       "style": "positron/style.json",
       "tilejson": {
-        "bounds": [-79.76506, 40.03666, -70.6222, 45.0327]
+        "bounds": [
+          -79.76506,
+          40.03666,
+          -70.6222,
+          45.0327
+        ]
       },
       "serve_rendered": false
     }
   },
   "sources": {
     "openmaptiles": {
-        "url": "mbtiles://basemap.mbtiles",
-        "type": "vector"
+      "url": "mbtiles://basemap.mbtiles",
+      "type": "vector"
     }
   },
   "data": {
