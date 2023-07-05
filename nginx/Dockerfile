@@ -1,5 +1,6 @@
 FROM nginx:1.24.0-alpine3.17-slim
 
-RUN rm /etc/nginx/conf.d/default.conf
+RUN apk add certbot certbot-nginx
 
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY ./conf.d/ /etc/nginx/conf.d/
+COPY ./cron/cert_renew /etc/periodic/monthly/

@@ -1,0 +1,7 @@
+#!/bin/ash
+
+## Runs as a monthly cron job, starting on the first day of the month at 5am
+## Waits 22 minutes to start the renewal, in line with letsencrypts request to
+## avoid "on the hour" updates that spike traffic to their servers
+sleep 22m
+certbot renew
