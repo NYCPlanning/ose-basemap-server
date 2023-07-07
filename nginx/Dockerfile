@@ -4,3 +4,5 @@ RUN apk add certbot certbot-nginx
 
 COPY ./conf.d/ /etc/nginx/conf.d/
 COPY ./cron/cert_renew /etc/periodic/weekly/
+
+CMD crond

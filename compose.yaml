@@ -1,6 +1,8 @@
 services:
   nginx:
     build: ./nginx
+    tty: true
+    stdin_open: true
     ports:
       - 80:80
       - 443:443
