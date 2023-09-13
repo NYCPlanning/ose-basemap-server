@@ -1,7 +1,0 @@
-#!/bin/ash
-
-## Runs as a weekly cron job, starting on saturdays at 3am
-## Waits 22 minutes to start the renewal, in line with letsencrypts request to
-## avoid "on the hour" updates that spike traffic to their servers
-sleep 22m
-certbot renew

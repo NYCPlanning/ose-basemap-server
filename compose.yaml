@@ -1,16 +1,9 @@
 services:
-  nginx:
-    build: ./nginx
-    ports:
-      - 80:80
-      - 443:443
-    depends_on:
-      - tileserver
   tileserver:
-    build: ./tileserver
+    build: 
+      context: .
+      args:
+        - STORAGE_URL
+        - FILE_NAME
     ports:
       - 8080:8080
-    volumes:
-      - ./nginx/letsencrypt/:/etc/letsencrypt/
-      - ./nginx/logs/nginx/:/var/log/nginx/
-      - ./nginx/logs/letsencrypt:/var/log/letsencrypt/

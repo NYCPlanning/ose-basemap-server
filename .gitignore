@@ -1,8 +1,5 @@
 # Mapbox vector tiles
 *.mbtiles
 
-# letsencrypt certificates
-letsencrypt/
-
-# logs for nginx and letsencrypt
-logs/
+# Env variables
+.env
