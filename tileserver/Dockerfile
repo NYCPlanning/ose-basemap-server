@@ -1,4 +1,4 @@
-FROM maptiler/tileserver-gl:v4.4.10
+FROM maptiler/tileserver-gl:v4.12.0
 
 COPY ./config.json /data
 COPY ./basemap.mbtiles /data
