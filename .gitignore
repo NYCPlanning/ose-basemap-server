@@ -1,5 +1,11 @@
-# Mapbox vector tiles
+.env
+
+# vector tiles
 *.mbtiles
+*.pmtiles
+*.pbf
+*.osm
+
 
 # letsencrypt certificates
 letsencrypt/
