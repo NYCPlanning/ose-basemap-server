@@ -1,5 +1,11 @@
 services:
   pmtiles:
     build: pmtiles/.
+    volumes:
+      - ./data:/data
   osmium:
     build: osmium/.
+  maven:
+    build: maven/.
+    volumes:
+      - ./data:/data
