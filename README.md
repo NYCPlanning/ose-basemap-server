@@ -1,3 +1,25 @@
+# PMTiles
+
+Download united states data
+```bash
+wget -O data/us.osm.pbf https://download.geofabrik.de/north-america/us-latest.osm.pbf
+```
+
+Extract the metro region from us
+```bash
+docker compose run --rm -v $(pwd)/data:/data osmium extract /data/us.osm.pbf --bbox=-79.21,37.09,-67.83,44.42 --output=/data/metro-region-osmium.osm.pbf
+```
+
+Generate pmtiles from local regional extract
+```bash
+docker compose run --rm planetiler --osm-path=/data/metro-region-osmium.osm.pbf --output=/data/planetiler-regional-viz.osm.pbf
+```
+
+Inspect the resulting tiles
+```bash
+docker compose run --rm pmtiles show data/planetiler-regional-viz.pmtiles --metadata
+```
+
 # OSE Basemap Server
 Tileserver of basemap for applications.
 
@@ -18,19 +40,19 @@ The application is designed to serve [mapbox vector tiles](https://github.com/ma
 The `basemap.mbtiles` file should be created before running the rest of the application.
 
 ### Directly serve the mbtiles
-For local development, the tiles may be served directly without relying on `nginx`. To start only the tileserver, run `docker compose up tileserver`. The tileserver will be available at `localhost:8080`. 
+For local development, the tiles may be served directly without relying on `nginx`. To start only the tileserver, run `docker compose up tileserver`. The tileserver will be available at `localhost:8080`.
 
 ### Nginx serve the mbtiles
 For production and production-like environments, the tileserver should be served behind ngnix. To start both nginx and the tileserver, run `docker compose up`
 
 Nginx will try to run on port 80 and 443. This is required for production configurations. However, it may cause issues during local development. Many systems prevent applications from running on these ports by default. This issue can be resolved by either:
-1) Navigating to `compose.yaml`, changing `80:80` to `8000:80`, and removing `443:443`  
-or  
+1) Navigating to `compose.yaml`, changing `80:80` to `8000:80`, and removing `443:443`
+or
 2) [Exposing root privileged ports](https://docs.docker.com/engine/security/rootless/) on the local machine
 ```sh
 sudo setcap cap_net_bind_service=ep $(which rootlesskit)
 systemctl --user restart docker
-```  
+```
 
 ### Test dependent applications
 The basemap server works in tandem with [labs-layers-api](https://github.com/NYCPlanning/labs-layers-api). The layers api contains references to the tile server which it then passes to its dependent applications. These references are in [public/static/v3.json](https://github.com/NYCPlanning/labs-layers-api/blob/df05f6a4695a04fa4470cf7bf9a97ed82ded866d/public/static/v3.json#L3) and [data/base/style.json](https://github.com/NYCPlanning/labs-layers-api/blob/df05f6a4695a04fa4470cf7bf9a97ed82ded866d/data/base/style.json#L21). For both of these references, `https://tiles.planninglabs.nyc` should be changed to the target url.
