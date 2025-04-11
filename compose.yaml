@@ -9,3 +9,9 @@ services:
     build: maven/.
     volumes:
       - ./data:/data
+  planetiler:
+    build: planetiler/.
+    environment:
+      JAVA_TOOL_OPTIONS: "-Xmx5g"
+    volumes:
+      - ./data:/data

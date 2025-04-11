@@ -5,6 +5,10 @@
 *.pmtiles
 *.pbf
 *.osm
+*.tsv*
+
+# Might only be needed for maven local build?
+/data/sources
 
 
 # letsencrypt certificates
