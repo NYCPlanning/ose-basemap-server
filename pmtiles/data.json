@@ -1,20 +1,29 @@
 {
   "tiles": [
-    "https://pmtiles.planninglabs.nyc/northeast/{z}/{x}/{y}.mvt"
+    "https://pmtiles.planninglabs.nyc/planetiler-regional-viz/{z}/{x}/{y}.mvt"
   ],
   "name": "OpenMapTiles",
   "format": "pbf",
   "basename": "north-america_us-northeast.mbtiles",
   "id": "openmaptiles",
   "attribution": "\u003Ca href=\"http://www.openmaptiles.org/\" target=\"_blank\"\u003E&copy; OpenMapTiles\u003C/a\u003E \u003Ca href=\"http://www.openstreetmap.org/about/\" target=\"_blank\"\u003E&copy; OpenStreetMap contributors\u003C/a\u003E",
-  "center": [-73.70104, 43.128005, 14],
+  "center": [
+    -73.70104,
+    43.128005,
+    14
+  ],
   "description": "Extract from https://openmaptiles.org",
   "maxzoom": 14,
   "minzoom": 0,
   "pixel_scale": "256",
   "version": "3.6.1",
   "maskLevel": "5",
-  "bounds": [-80.52632, 38.77178, -66.87576, 47.48423],
+  "bounds": [
+    -80.52632,
+    38.77178,
+    -66.87576,
+    47.48423
+  ],
   "planettime": "1499040000000",
   "vector_layers": [
     {
