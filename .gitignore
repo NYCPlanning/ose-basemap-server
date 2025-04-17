@@ -10,6 +10,8 @@
 # Might only be needed for maven local build?
 /data/sources
 
+/tileserver/data/fonts/*
+!/tileserver/data/fonts/.gitkeep
 
 # letsencrypt certificates
 letsencrypt/

@@ -1,14 +1,16 @@
 services:
+  tileserver:
+    build: tileserver/.
+    ports:
+      - 8080:8080
+    volumes:
+      - ./tileserver/data:/data
   pmtiles:
     build: pmtiles/.
     volumes:
       - ./data:/data
   osmium:
     build: osmium/.
-    volumes:
-      - ./data:/data
-  maven:
-    build: maven/.
     volumes:
       - ./data:/data
   planetiler:
