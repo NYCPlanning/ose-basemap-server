@@ -5,6 +5,8 @@ services:
       - ./data:/data
   osmium:
     build: osmium/.
+    volumes:
+      - ./data:/data
   maven:
     build: maven/.
     volumes:

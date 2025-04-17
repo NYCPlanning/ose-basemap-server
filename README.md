@@ -12,7 +12,7 @@ docker compose run --rm -v $(pwd)/data:/data osmium extract /data/us.osm.pbf --b
 
 Generate pmtiles from local regional extract
 ```bash
-docker compose run --rm planetiler --osm-path=/data/metro-region-osmium.osm.pbf --output=/data/planetiler-regional-viz.osm.pbf
+docker compose run --rm planetiler --osm-path=/data/metro-region-osmium.osm.pbf --output=/data/planetiler-regional-viz.mbtiles --download
 ```
 
 Inspect the resulting tiles
