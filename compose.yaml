@@ -6,11 +6,13 @@ services:
       - 443:443
     depends_on:
       - tileserver
+    volumes:
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+      - ./nginx/cron/:/etc/periodic/weekly/
+      - ./nginx/letsencrypt/:/etc/letsencrypt/
+      - ./nginx/logs/nginx/:/var/log/nginx/
+      - ./nginx/logs/letsencrypt:/var/log/letsencrypt/
   tileserver:
     build: ./tileserver
     ports:
       - 8080:8080
-    volumes:
-      - ./nginx/letsencrypt/:/etc/letsencrypt/
-      - ./nginx/logs/nginx/:/var/log/nginx/
-      - ./nginx/logs/letsencrypt:/var/log/letsencrypt/
