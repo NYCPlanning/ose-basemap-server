@@ -1,9 +1,6 @@
-FROM nginx:1.26.1-alpine3.19-slim
+FROM nginx:1.27.5-alpine3.21-slim
 
-RUN apk update 
-RUN apk add openssl 
+RUN apk update
+RUN apk add openssl
 RUN apk upgrade --no-cache
 RUN apk add certbot certbot-nginx
-
-COPY ./conf.d/ /etc/nginx/conf.d/
-COPY ./cron/cert_renew /etc/periodic/weekly/
