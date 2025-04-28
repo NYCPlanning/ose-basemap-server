@@ -12,7 +12,19 @@ services:
       - ./nginx/letsencrypt/:/etc/letsencrypt/
       - ./nginx/logs/nginx/:/var/log/nginx/
       - ./nginx/logs/letsencrypt:/var/log/letsencrypt/
+  osmium:
+    build: osmium/.
+    volumes:
+      - ./data:/data
+  planetiler:
+    build: planetiler/.
+    environment:
+      JAVA_TOOL_OPTIONS: "-Xmx5g"
+    volumes:
+      - ./data:/data
   tileserver:
     build: ./tileserver
     ports:
       - 8080:8080
+    volumes:
+      - ./tileserver/data:/data

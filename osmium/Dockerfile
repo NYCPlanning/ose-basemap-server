@@ -1,0 +1,1 @@
+FROM iboates/osmium:latest
