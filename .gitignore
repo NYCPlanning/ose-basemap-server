@@ -1,5 +1,9 @@
-# Mapbox vector tiles
+# Data
+/data/*
+!/data/.gitkeep
 *.mbtiles
+*.pbf
+
 
 # letsencrypt certificates
 letsencrypt/

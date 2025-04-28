@@ -1,0 +1,27 @@
+{
+  "options": {
+    "paths": {
+      "fonts": "fonts",
+      "styles": "styles"
+    },
+    "serveAllFonts": true
+  },
+  "styles": {
+    "positron": {
+      "style": "positron/style.json",
+      "tilejson": {
+        "bounds": [
+          -79.21,
+          37.09,
+          -67.83,
+          44.42
+        ]
+      }
+    }
+  },
+  "data": {
+    "v3": {
+      "mbtiles": "metro-region.mbtiles"
+    }
+  }
+}
