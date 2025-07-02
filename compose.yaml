@@ -28,3 +28,12 @@ services:
       - 127.0.0.1:8080:8080
     volumes:
       - ./tileserver/data:/data
+  terraform:
+    build: ./terraform
+    environment:
+      - ARM_CLIENT_ID=${ARM_CLIENT_ID}
+      - ARM_CLIENT_SECRET=${ARM_CLIENT_SECRET}
+      - ARM_SUBSCRIPTION_ID=${ARM_SUBSCRIPTION_ID}
+      - ARM_TENANT_ID=${ARM_TENANT_ID}
+    volumes:
+      - ./terraform/src:/home
