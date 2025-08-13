@@ -13,3 +13,6 @@ logs/
 
 # DSStore
 .DS_Store
+
+# Node
+node_modules

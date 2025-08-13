@@ -1,0 +1,17 @@
+{
+  "name": "ose-basemap-server",
+  "version": "0.1.0",
+  "description": "scripts to manage basemap server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ip-import": "tsx -C import ./azure-ip-import.ts"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^24.2.1",
+    "execa": "^9.6.0",
+    "tsx": "^4.20.4"
+  }
+}
