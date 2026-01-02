@@ -22,6 +22,12 @@ services:
       JAVA_TOOL_OPTIONS: "-Xmx5g"
     volumes:
       - ./data:/data
+  pmtiles:
+    build: pmtiles/.
+    volumes:
+      - ./pmtiles/data:/data
+    ports:
+      - 127.0.0.1:8181:8080
   tileserver:
     build: ./tileserver
     ports:
