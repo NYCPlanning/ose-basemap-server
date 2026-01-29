@@ -1,4 +1,4 @@
-FROM nginx:1.27.5-alpine3.21-slim
+FROM nginx:1.28.1-alpine3.23-perl
 
 RUN apk update
 RUN apk add openssl

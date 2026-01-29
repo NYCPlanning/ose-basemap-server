@@ -1,1 +1,1 @@
-FROM maptiler/tileserver-gl-light:v5.3.0
+FROM maptiler/tileserver-gl-light:v5.5.0
