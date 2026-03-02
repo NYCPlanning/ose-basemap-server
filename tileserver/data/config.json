@@ -22,6 +22,12 @@
   "data": {
     "v3": {
       "mbtiles": "metro-region.mbtiles"
+    },
+    "city-council-districts": {
+      "pmtiles": "city-council-districts.pmtiles"
+    },
+    "capital-projects": {
+      "pmtiles": "capital-projects.pmtiles"
     }
   }
 }
