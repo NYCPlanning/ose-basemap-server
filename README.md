@@ -47,7 +47,7 @@ For local development, the tiles may be served directly without relying on `ngin
 For production and production-like environments, the tileserver should be served behind ngnix. To start both nginx and the tileserver, run `docker compose up tileserver nginx`
 
 Nginx will try to run on port 80 and 443. This is required for production configurations. However, it may cause issues during local development. Many systems prevent applications from running on these ports by default. This issue can be resolved by either:
-1) Navigating to `compose.yaml`, changing `80:80` to `8000:80`, and removing `443:443`
+1) Navigating to `compose.yaml`, changing `80:80` to `8000:80`, and removing `443:443`. Going to localhost:8000 will now serve tileserver behind nginx.
 or
 2) [Exposing root privileged ports](https://docs.docker.com/engine/security/rootless/) on the local machine
 ```sh
