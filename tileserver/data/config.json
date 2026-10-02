@@ -1,5 +1,6 @@
 {
   "options": {
+    "frontPage": false,
     "paths": {
       "fonts": "fonts",
       "styles": "styles"
