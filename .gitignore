@@ -13,3 +13,6 @@ logs/
 
 # DSStore
 .DS_Store
+
+# editor
+/.vscode/
