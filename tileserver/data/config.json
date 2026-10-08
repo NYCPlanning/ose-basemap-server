@@ -1,6 +1,6 @@
 {
   "options": {
-    "frontPage": false,
+    "frontPage": "index.html",
     "paths": {
       "fonts": "fonts",
       "styles": "styles"
